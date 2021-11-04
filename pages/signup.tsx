@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
-import { useUserRepository } from "../../application/repostiories/useUserRepository";
-import AuthNavBar from "../../components/auth/AuthNavBar";
-import SignUpForm from "../../components/auth/SignUpForm";
-import PageHead from "../../components/PageHead";
-import PageLayOut from "../../components/PageLayOut";
-import { useObservable } from "../../infrastructure/hooks/useObservable";
-import { signUpUserObject } from "../../infrastructure/types";
+import { useUserRepository } from "../application/repostiories/useUserRepository";
+import AuthNavBar from "../components/auth/AuthNavBar";
+import SignUpForm from "../components/auth/SignUpForm";
+import PageHead from "../components/PageHead";
+import PageLayOut from "../components/PageLayOut";
+import { useObservable } from "../infrastructure/hooks/useObservable";
+import { signUpUserObject } from "../infrastructure/types";
 
 const SignUpPage = () => {
   const router = useRouter()

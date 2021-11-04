@@ -7,9 +7,9 @@ module.exports = {
   ) {
     return {
       '/': { page: '/' },
-      '/login': { page: '/auth/LoginPage' },
-      '/signup': { page: '/auth/SignUpPage' },
-      '/resetPassword': { page: '/auth/ResetPasswordPage' },
+      '/login': { page: '/login' },
+      '/signup': { page: '/auth/signup' },
+      '/resetPassword': { page: '/resetPassword' },
     }
   },
 }
