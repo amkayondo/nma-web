@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
-import { useUserRepository } from "../../application/repostiories/useUserRepository";
-import AuthNavBar from "../../components/auth/AuthNavBar";
-import ResetPasswordForm from "../../components/auth/ResetPasswordForm";
-import PageHead from "../../components/PageHead";
-import PageLayOut from "../../components/PageLayOut";
-import { useObservable } from "../../infrastructure/hooks/useObservable";
+import { useUserRepository } from "../application/repostiories/useUserRepository";
+import AuthNavBar from "../components/auth/AuthNavBar";
+import ResetPasswordForm from "../components/auth/ResetPasswordForm";
+import PageHead from "../components/PageHead";
+import PageLayOut from "../components/PageLayOut";
+import { useObservable } from "../infrastructure/hooks/useObservable";
 
 const ResetPasswordPage = () => {
   const router = useRouter();

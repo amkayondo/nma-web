@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useUserObservable } from "../../application/observables/useUserObservable";
-import { useUserRepository } from "../../application/repostiories/useUserRepository";
-import AuthNavBar from "../../components/auth/AuthNavBar";
-import LoginForm from "../../components/auth/LoginForm";
-import PageHead from "../../components/PageHead";
-import PageLayOut from "../../components/PageLayOut";
-import { useObservable } from "../../infrastructure/hooks/useObservable";
-import { loginUserObject } from "../../infrastructure/types";
+import { useUserObservable } from "../application/observables/useUserObservable";
+import { useUserRepository } from "../application/repostiories/useUserRepository";
+import AuthNavBar from "../components/auth/AuthNavBar";
+import LoginForm from "../components/auth/LoginForm";
+import PageHead from "../components/PageHead";
+import PageLayOut from "../components/PageLayOut";
+import { useObservable } from "../infrastructure/hooks/useObservable";
+import { loginUserObject } from "../infrastructure/types";
 import { useRouter } from "next/router";
-import SplashScreen from "../../components/SplashScreen";
+import SplashScreen from "../components/SplashScreen";
 
 export interface loginPageProps {
   event: {
