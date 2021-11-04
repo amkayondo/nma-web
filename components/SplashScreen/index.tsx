@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 export interface SplashScreenProps {
     style?: object,
-    logo: String
+    logo: any
 }
 
 const SplashScreen = (props: SplashScreenProps) => {
@@ -13,7 +13,7 @@ const SplashScreen = (props: SplashScreenProps) => {
         backgroundColor: color,
         height: "100vh",
         width: "100vw",
-        animation: "b 30s cubic-bezier(.6,0,.4,1) forwards"
+        animation: "b 30s cubic-bezier(.6,0,.4,1) forwards",
     }
     setTimeout(() => setColor("#F7911D"), 2000)
     return (
