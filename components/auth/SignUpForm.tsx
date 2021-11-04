@@ -96,17 +96,19 @@ const SignUpForm = (props: SignUpFormProps) => {
       <Form.Group className="d-flex justify-content-start mt-3">
         <p>
           Already have an account?{" "}
-          <a
-            href="/login"
-            style={{
-              color: "black",
-              textDecoration: "none",
-              fontWeight: 900,
-            }}
-            className="link-dark"
-          >
-            Login
-          </a>
+          <Link href="/login">
+            <strong
+              style={{
+                color: "black",
+                textDecoration: "none",
+                fontWeight: 900,
+                cursor: "pointer"
+              }}
+              className="link-dark"
+            >
+              Login
+            </strong>
+          </Link>
         </p>
       </Form.Group>
     </Form>

@@ -35,12 +35,12 @@ const LoginForm = (props: LoginFormProps) => {
         </Form.Label>
       </Form.Group>
       {isError === true ? (
-        error.length === 0 || error === 'Unsupported input' ? (
+        error.length === 0 || error === "Unsupported input" ? (
           ""
         ) : (
           <Alert variant="danger">{error}</Alert>
         )
-      ) :  message === undefined || message.length === 0 ? (
+      ) : message === undefined || message.length === 0 ? (
         ""
       ) : (
         <Alert variant="primary">{message}</Alert>
@@ -82,7 +82,7 @@ const LoginForm = (props: LoginFormProps) => {
         Log In
       </Button>
       <Form.Group className="d-flex justify-content-end">
-        <a className="text-white" href="/signup">
+        <Link href="/signup">
           <Button
             style={{
               marginTop: "16px",
@@ -96,7 +96,7 @@ const LoginForm = (props: LoginFormProps) => {
           >
             Create new account
           </Button>
-        </a>
+        </Link>
       </Form.Group>
     </Form>
   );
