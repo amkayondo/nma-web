@@ -16,9 +16,9 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     userRepository.getUserProfileAction();
-    if (userState.isLoggedIn === false && userState.isError === true) {
-      router.replace("/login");
-    }
+    userState.isLoggedIn === false && userState.isError === true
+      ? router.replace("/login")
+      : null;
   }, []);
 
   return (
