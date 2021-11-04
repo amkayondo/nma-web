@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { useUserRepository } from "../../application/repostiories/useUserRepository";
 import AuthNavBar from "../../components/auth/AuthNavBar";
@@ -8,13 +9,14 @@ import { useObservable } from "../../infrastructure/hooks/useObservable";
 import { signUpUserObject } from "../../infrastructure/types";
 
 const SignUpPage = () => {
+  const router = useRouter()
   const userRepository = useUserRepository();
   const userState = useObservable(userRepository.getUserObservable());
   const onSubmit = (e: signUpUserObject) => {
     return userRepository.signUpUserAction(e);
   };
   if (userState.isLoggedIn === true) {
-     window.location.replace("/");
+     router.replace("/");
   }
 
   useEffect(() => {

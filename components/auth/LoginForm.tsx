@@ -40,7 +40,7 @@ const LoginForm = (props: LoginFormProps) => {
         ) : (
           <Alert variant="danger">{error}</Alert>
         )
-      ) : message.length === 0 ? (
+      ) :  message === undefined || message.length === 0 ? (
         ""
       ) : (
         <Alert variant="primary">{message}</Alert>

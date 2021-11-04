@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { useUserRepository } from "../../application/repostiories/useUserRepository";
 import AuthNavBar from "../../components/auth/AuthNavBar";
@@ -7,11 +8,12 @@ import PageLayOut from "../../components/PageLayOut";
 import { useObservable } from "../../infrastructure/hooks/useObservable";
 
 const ResetPasswordPage = () => {
+  const router = useRouter();
   const userRepository = useUserRepository();
   const userState = useObservable(userRepository.getUserObservable());
 
   if (userState.isLoggedIn === true) {
-    window.location.replace("/");
+    router.replace("/");
   }
 
   useEffect(() => {

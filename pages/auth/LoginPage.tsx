@@ -8,6 +8,7 @@ import PageLayOut from "../../components/PageLayOut";
 import { useObservable } from "../../infrastructure/hooks/useObservable";
 import { loginUserObject } from "../../infrastructure/types";
 import { useRouter } from "next/router";
+import SplashScreen from "../../components/SplashScreen";
 
 export interface loginPageProps {
   event: {
@@ -27,15 +28,16 @@ const LoginPage = () => {
     });
   };
   if (userState.isLoggedIn === true) {
-     window.location.replace("/");
+     router.replace("/");
   }
   
   useEffect(() => {
     userRepository.getUserProfileAction();
   }, []);
 
-  console.log(userState);
-
+  const [isLoading, setIsLoading] = useState(true)
+    setTimeout(() => setIsLoading(false), 5000)
+    if(isLoading === true) return <SplashScreen logo={"/nma_logo.png"}/>
   return (
     <>
       <PageHead pageName="Login" />
