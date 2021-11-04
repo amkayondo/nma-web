@@ -11,7 +11,7 @@ const AppTopNav = (props: any) => {
   };
   useEffect(() => {
     if (props.userState.isLoading === false && props.userState.isError) {
-      return router.push("/login");
+       router.push("/login");
     }
     
   });
