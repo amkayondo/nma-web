@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from 'next/link'
 
 const AuthNavBar = () => {
+    
     return (
       <Navbar bg="transparent" variant="dark">
         <Container className="d-flex align-items-center">
