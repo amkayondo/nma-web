@@ -8,7 +8,7 @@ module.exports = {
     return {
       '/': { page: '/' },
       '/login': { page: '/login' },
-      '/signup': { page: '/auth/signup' },
+      '/signup': { page: '/signup' },
       '/resetPassword': { page: '/resetPassword' },
     }
   },

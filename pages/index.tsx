@@ -14,12 +14,19 @@ const Home: NextPage = () => {
   const userRepository = useUserRepository();
   const userState = useObservable(userRepository.getUserObservable());
 
+  const checkIfUserIsLoggedIn = () => {
+    return userState.isLoggedIn === false && userState.isError === true
+      ? window.location.replace("/login")
+      : null;
+  };
+
   useEffect(() => {
     userRepository.getUserProfileAction();
-    userState.isLoggedIn === false && userState.isError === true
-      ? router.replace("/login")
-      : null;
   }, []);
+
+  checkIfUserIsLoggedIn();
+
+  console.log("sads", userState);
 
   return (
     <div>
@@ -43,7 +50,9 @@ const Home: NextPage = () => {
             </Card>
           </PageLayOut>
         </>
-      ) : null}
+      ) : (
+        ""
+      )}
     </div>
   );
 };
