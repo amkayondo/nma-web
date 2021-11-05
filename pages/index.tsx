@@ -26,8 +26,6 @@ const Home: NextPage = () => {
 
   checkIfUserIsLoggedIn();
 
-  console.log("sads", userState);
-
   return (
     <div>
       <PageHead pageName="Dashboard" />
